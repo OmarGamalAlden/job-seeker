@@ -1,0 +1,204 @@
+/* Main project font */
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Merriweather:wght@400;700;900&family=Montserrat+Alternates:wght@400;700&display=swap");
+
+/* start global rules */
+
+:root {
+  --main-number: 15px;
+  --font-weight-1: 400;
+  --font-weight-2: 700;
+  --font-weight-3: 900;
+  --main-color: #ec9d6f;
+  --main-color-2: #f6ae84;
+  --background-color: #f6f6f6;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Merriweather";
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* end global rules */
+
+/* start navbar section */
+
+nav .left_nav img {
+  width: 95px;
+  height: 95px;
+}
+nav .left_nav span {
+  color: var(--main-color-2);
+}
+nav {
+  background-color: var(--background-color);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 99999999999999;
+}
+nav .right_nav ul li a {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--main-color);
+}
+nav .right_nav ul li span {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--main-color);
+  cursor: pointer;
+}
+nav .right_nav ul li:hover > a,
+nav .right_nav ul li:hover > span {
+  color: rgb(192, 167, 167);
+}
+/* start media queries styling */
+@media (min-width: 320px) and (max-width: 480px) {
+  /* Mobile devices */
+  nav .left_nav img {
+    width: 80px;
+    height: 80px;
+  }
+  nav .left_nav span {
+    font-size: 0.98rem !important;
+  }
+  nav .right_nav ul li a {
+    font-size: 0.89rem;
+  }
+  nav .right_nav ul li span {
+    font-size: 0.89rem;
+  }
+  nav .right_nav ul li {
+    margin: 0px 5px !important;
+  }
+  .top_navbar {
+    padding: 0px 10px !important;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  /* iPads, Tablets */
+  nav .left_nav img {
+    width: 89px;
+    height: 89px;
+  }
+  nav .left_nav span {
+    font-size: 1rem !important;
+  }
+  nav .right_nav ul li a {
+    font-size: 0.99rem;
+  }
+  nav .right_nav ul li span {
+    font-size: 0.99rem;
+  }
+  nav .right_nav ul li {
+    margin: 0px 10px !important;
+  }
+  .top_navbar {
+    padding: 0px 20px !important;
+  }
+}
+/* start media queries styling */
+
+/* end navbar section */
+
+/* start register section */
+
+.main-container {
+  padding-top: 95px;
+  background: linear-gradient(135deg, #dda15e, #99674a);
+}
+
+.main-container .register_form input {
+  width: 100%;
+  border: none;
+  background-color: #f1f1f1;
+  padding: 15px 24px;
+  font-size: 18px;
+  border-radius: 50px;
+  transition: all 0.2s;
+  margin-bottom: 10px;
+}
+.main-container .register_form input[type="file"] {
+  width: 68%;
+  font-size: 14px;
+  margin-bottom: 0px;
+}
+.main-container .register_form input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--main-color-2);
+}
+.main-container .register_form label {
+  margin-left: 20px;
+  font-size: 17px;
+  color: var(--background-color);
+}
+.main-container .register_form button {
+  border: 0;
+  background: transparent;
+  border-radius: var(--main-number);
+  background-color: rgba(205, 147, 89, 0.5);
+  padding: var(--main-number);
+  font-weight: 600;
+  margin-top: 20px;
+  transition: all 0.4s;
+}
+.main-container .register_form button:hover {
+  color: white;
+  transform: translateX(-12px);
+}
+.main-container .register_info {
+  background-color: #f1f1f1;
+  border-radius: var(--main-number);
+  padding: 22px var(--main-number);
+  text-align: center;
+  color: var(--main-color);
+}
+.main-container .register_info a {
+  opacity: 80%;
+  font-size: 15px;
+  transition: all 0.2s;
+}
+.main-container .register_info a:hover {
+  text-decoration: underline;
+}
+/* start media queries styling */
+@media (min-width: 320px) and (max-width: 480px) {
+  /* Mobile devices */
+  .main-container .register_form input {
+    width: 100%;
+    padding: 10px 19px;
+    margin-bottom: 10px;
+  }
+  .main-container .register_form input[type="file"] {
+    width: 63%;
+    font-size: 11px;
+  }
+  .main-container .register_info {
+    margin-bottom: 9px;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  /* iPads, Tablets */
+  .main-container .register_form input {
+    width: 100%;
+    padding: 13px 22px;
+    margin-bottom: 12px;
+  }
+  .main-container .register_form input[type="file"] {
+    width: 59%;
+    font-size: 14px;
+  }
+  .main-container .register_info {
+    margin-bottom: 12px;
+  }
+}
+/* start media queries styling */
+
+/* end register section */
