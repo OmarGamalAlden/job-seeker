@@ -11,6 +11,7 @@
   --main-color: #ec9d6f;
   --main-color-2: #f6ae84;
   --background-color: #f6f6f6;
+  --navbar-height: 95px;
 }
 * {
   padding: 0;
@@ -24,7 +25,22 @@ a {
   text-decoration: none;
   color: black;
 }
-
+.main-container {
+  padding-top: 95px;
+}
+.main-alert {
+  position: absolute;
+  top: var(--navbar-height);
+  left: 50%;
+  transform: translateX(-50%);
+}
+.alert {
+  padding: 8px 4px;
+  font-size: 14px;
+  height: fit-content;
+  margin: 0;
+  border-radius: 10px;
+}
 /* end global rules */
 
 /* start navbar section */
@@ -110,12 +126,12 @@ nav .right_nav ul li:hover > span {
 
 /* start register section */
 
-.main-container {
-  padding-top: 95px;
+.register-container {
   background: linear-gradient(135deg, #dda15e, #99674a);
+  height: calc(100vh - var(--navbar-height));
 }
 
-.main-container .register_form input {
+.register-container .register_form input {
   width: 100%;
   border: none;
   background-color: #f1f1f1;
@@ -125,21 +141,21 @@ nav .right_nav ul li:hover > span {
   transition: all 0.2s;
   margin-bottom: 10px;
 }
-.main-container .register_form input[type="file"] {
+.register-container .register_form input[type="file"] {
   width: 68%;
   font-size: 14px;
   margin-bottom: 0px;
 }
-.main-container .register_form input:focus {
+.register-container .register_form input:focus {
   outline: none;
   box-shadow: 0 0 0 2px var(--main-color-2);
 }
-.main-container .register_form label {
+.register-container .register_form label {
   margin-left: 20px;
   font-size: 17px;
   color: var(--background-color);
 }
-.main-container .register_form button {
+.register-container .register_form button {
   border: 0;
   background: transparent;
   border-radius: var(--main-number);
@@ -149,53 +165,53 @@ nav .right_nav ul li:hover > span {
   margin-top: 20px;
   transition: all 0.4s;
 }
-.main-container .register_form button:hover {
+.register-container .register_form button:hover {
   color: white;
   transform: translateX(-12px);
 }
-.main-container .register_info {
+.register-container .register_info {
   background-color: #f1f1f1;
   border-radius: var(--main-number);
   padding: 22px var(--main-number);
   text-align: center;
   color: var(--main-color);
 }
-.main-container .register_info a {
+.register-container .register_info a {
   opacity: 80%;
   font-size: 15px;
   transition: all 0.2s;
 }
-.main-container .register_info a:hover {
+.register-container .register_info a:hover {
   text-decoration: underline;
 }
 /* start media queries styling */
 @media (min-width: 320px) and (max-width: 480px) {
   /* Mobile devices */
-  .main-container .register_form input {
+  .register-container .register_form input {
     width: 100%;
     padding: 10px 19px;
     margin-bottom: 10px;
   }
-  .main-container .register_form input[type="file"] {
+  .register-container .register_form input[type="file"] {
     width: 63%;
     font-size: 11px;
   }
-  .main-container .register_info {
+  .register-container .register_info {
     margin-bottom: 9px;
   }
 }
 @media (min-width: 481px) and (max-width: 768px) {
   /* iPads, Tablets */
-  .main-container .register_form input {
+  .register-container .register_form input {
     width: 100%;
     padding: 13px 22px;
     margin-bottom: 12px;
   }
-  .main-container .register_form input[type="file"] {
+  .register-container .register_form input[type="file"] {
     width: 59%;
     font-size: 14px;
   }
-  .main-container .register_info {
+  .register-container .register_info {
     margin-bottom: 12px;
   }
 }

@@ -8,7 +8,9 @@ export default function Layout() {
       {/* static commponent */}
       <Navbar />
       {/* dynamic commponent */}
-      <Outlet></Outlet>
+      <div className="main-container">
+        <Outlet></Outlet>
+      </div>
     </>
   );
 }
