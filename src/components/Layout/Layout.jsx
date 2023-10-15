@@ -1,12 +1,19 @@
 import React from "react";
 import Navbar from "../Navbar/Navbar.jsx";
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 
-export default function Layout() {
+export default function Layout({ user, setUser }) {
+  // handel logout case
+  let navigate = useNavigate();
+  function logOut() {
+    setUser(null);
+    localStorage.removeItem("user");
+    navigate("/login");
+  }
   return (
     <>
       {/* static commponent */}
-      <Navbar />
+      <Navbar logOut={logOut} user={user} />
       {/* dynamic commponent */}
       <div className="main-container">
         <Outlet></Outlet>

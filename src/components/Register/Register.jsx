@@ -182,7 +182,7 @@ export default function Register() {
                         id="resume"
                         type="file"
                         name="resume"
-                        accept="application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/msword"
+                        accept="application/pdf"
                       />
                     </div>
                     <button type="submit">Submit</button>
