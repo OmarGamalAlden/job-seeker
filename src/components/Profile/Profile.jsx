@@ -1,7 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 export default function Profile({ extractedData }) {
-  console.log(extractedData);
+  // call api for weather condition
+  async function weatherCondition(city) {
+    const deafultCity = "cairo";
+    let result = await fetch(
+      `https://api.openweathermap.org/data/2.5/weather?q=${
+        city?.replace(/['"]+/g, "") || deafultCity
+      }&appid=e84b060003e0d49034f1a65cf880e0b0`
+    );
+    console.log(result);
+  }
+  useEffect(() => {
+    if (extractedData) {
+      weatherCondition(
+        extractedData?.personal_infos?.address?.raw_input_location
+      );
+    }
+  }, [extractedData]);
   return (
     <>
       <div className="container py-5">
