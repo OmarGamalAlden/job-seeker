@@ -7,7 +7,7 @@ export default function Profile({ extractedData }) {
     const deafultCity = "cairo";
     let result = await fetch(
       `https://api.openweathermap.org/data/2.5/weather?q=${
-        city?.replace(/['"]+/g, "") || deafultCity
+        city?.replace(/['"]+/g, "") || deafultCity.replace(/['"]+/g, "")
       }&appid=e84b060003e0d49034f1a65cf880e0b0`
     );
     console.log(result);
