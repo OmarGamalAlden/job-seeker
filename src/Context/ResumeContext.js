@@ -15,7 +15,7 @@ function ResumeContextProvider(props) {
       url: "https://api.edenai.run/v2/ocr/resume_parser",
       headers: {
         Authorization:
-          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMzkwZTIwZTMtMTQ1ZC00NDQ1LTgxMWUtMmZjOGU4MWE3ZTNlIiwidHlwZSI6ImFwaV90b2tlbiJ9.Uh6x7UEn_PWMKNwgtLT7d8qzjhvVMw8-Tcz-7PRNUzQ",
+          `Bearer ${process.env.REACT_APP_API_KEY}`,
       },
       data: {
         show_original_response: false,

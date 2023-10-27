@@ -4,7 +4,7 @@ import { getDatabase } from "firebase/database";
 
 // web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: process.env.FIREBASE_APIKEY,
+  apiKey: process.env.REACT_APP_FIREBASE_APIKEY,
   authDomain: "job-seeker-5ec5b.firebaseapp.com",
   projectId: "job-seeker-5ec5b",
   storageBucket: "job-seeker-5ec5b.appspot.com",
