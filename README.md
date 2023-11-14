@@ -4,6 +4,9 @@
 
 Welcome to Job Seeker, a powerful web application designed to simplify the job search process. Job Seeker utilizes cutting-edge technologies to extract and display essential information from user resumes, providing a seamless and user-friendly experience.
 
+## Demo
+For watch demo about how the web app works !! https://drive.google.com/file/d/1HblRFlfv_cNXtSpPmlUEYjld5Jt1ub3V/view?usp=sharing
+
 ## Features
 
 - **Resume Data Extraction:** Automatically extracts key information from user resumes.
